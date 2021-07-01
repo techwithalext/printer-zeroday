@@ -7,3 +7,5 @@ $Ar = New-Object System.Security.AccessControl.FileSystemAccessRule("System", "M
 $Acl.RemoveAccessRule($Ar)
 
 Set-Acl $Path $Acl
+
+Restart-Service -Name Spooler -Force
